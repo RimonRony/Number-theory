@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+using namespace std;
+int main ()
+{
+    int n1=0,n2=0,n3=0,n4=0;
+    int step, lcm;
+    cin>>n1>>n2>>n3>>n4;
+    /*
+    ম্যাক্স বের করার জন্য , লুপ চালিয়ে নিতে হবে । সেক্ষেত্রে এরে ইউজ করা যাবে । ম্যাক্স টাকে স্টেপ ধরতে হবে ।
+
+    */
+    int max=n4;
+    step= max;
+        while(1) {
+      if(max%n1 == 0 && max%n2 == 0 && max%n3 == 0 && max%n4 == 0) {
+         lcm = max;
+         break;
+      }
+
+      max += step;
+
+    }
+    cout<<lcm;
+}
